@@ -4,6 +4,16 @@
     max-width: 100vw;
 }
 
+/* colors */ 
+:root {
+    --red: #D80609;
+    --yellow: #F4CF0E;
+    --green: #8BCF49;
+    --blue: #245396;
+    --lightblue: #91bbfff3;
+}
+/* colors */
+
 main {
     background-color: #e8e8e8;
     padding: 1.5em 0;
@@ -74,7 +84,7 @@ header a {
 .atf-container {
     text-align: center;
     display: block;
-    width: fit-content;
+   /* width: fit-content;*/
     padding: 36px;
     line-height: 1;
 }
@@ -101,6 +111,8 @@ header a {
     display: block;
     margin: auto;
 }
+
+/* Button Styles */
 
 .cta-btn {
     color: #636363;
@@ -154,6 +166,73 @@ header a {
     align-self: center;
     height: auto;
 }
+
+
+.primary-btn {
+    padding: 1em;
+    background-color: var(--yellow);
+    border-radius: 5px;
+}
+
+.primary-btn a {
+    color: white;
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.primary-btn:hover {
+    background: transparent;
+    height:auto;
+    border: 3px solid var(--green);
+}
+
+.primary-btn:hover a {
+    color: var(--green);
+}
+
+.primary-btn-hero {
+    padding: 1em;
+    background-color: var(--lightblue);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.3em;
+    /*color: white;*/
+}
+
+.primary-btn-hero:hover {
+    background-color: white;
+    height:auto;
+    /*border: 3px solid var(--blue);*/
+}
+
+.secondary-btn {
+    padding: 1em;
+    background: transparent;
+    height:auto;
+    border: 3px solid var(--blue);
+    border-radius: 5px;
+}
+
+.secondary-btn a {
+    color: var(--blue);
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.secondary-btn:hover {
+    background-color: var(--yellow);
+    border: none;  
+}
+
+.secondary-btn:hover a {
+    color: white;
+}
+
+/* Button Styles */
 
 .partner-col {
     text-align: center;
@@ -1147,4 +1226,550 @@ footer td {
 
 .testimonials p {
     margin: 1em;
+}
+
+/* fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Open+Sans&display=swap');
+
+/* colors */ 
+:root {
+    --red: #D80609;
+    --yellow: #F4CF0E;
+    --green: #8BCF49;
+    --blue: #245396;
+    --lightblue: #91bbfff3;
+}
+
+
+/* global */ 
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+button {
+    border: none;
+    width: 33%;
+}
+
+li {
+    list-style-type: none;
+}
+
+.cta button {
+    width: 15%;
+    margin-right: 10px;
+}
+
+.card {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 25vw;
+    padding: 25px 0px;
+
+    color: white;
+}
+
+.card h4 {
+    font-weight: 700;
+}
+.card p {
+    width: 75%;
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 10vw;
+    padding: 8px;
+    margin: 5px;
+    background: var(--green);
+    border: none;
+    width: 10vw;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    border: 3px solid var(--green);
+}
+
+.subtitle {
+    color:var(--blue);
+    font-weight: bold;;
+}
+
+
+#login-button {
+    padding: 10px;
+    background-color: var(--red);
+    color: white;
+    border-radius: 5px;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+#login-button:hover {
+    border: 3px solid var(--red);
+    color: var(--red);
+    background: transparent;
+}
+
+
+/* ctas */ 
+.cta {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin: 5em auto;
+}
+
+.cta p {
+    margin: 1em;
+    color: var(--lightblue);
+    font-weight: 700;
+}
+
+/* heros */ 
+.hero {
+    width: 100vw;
+    background: url('../content/imgs/hero.webp'), white;
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    top: 300px;
+    left: 70px;
+    overflow: none;
+}
+
+.hero > * {
+    margin: 5px;
+}
+
+.hero-content h1 {
+    font-size: 5em;
+}
+
+.hero-content p {
+    font-size: 3em;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.hero-content .hero-cta {
+    margin: 2em 0;
+}
+
+.hero-content .hero-cta button{
+    width: 200px;
+    margin-left: 10px;
+}
+
+#about-hero {
+    background-image: url("../content/imgs/Jr-Robotics.jpg");
+}
+
+#programs-hero {
+    background-image: url("../content/imgs/Coding-2.jpg");
+}
+
+
+/* HOME PAGE */ 
+/* about us section */
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: rgb(139,207,73);
+    background: linear-gradient(360deg, rgba(139,207,73,1) 0%, rgba(244,207,14,1) 21%, rgba(255,255,255,1) 90%); */
+    padding:  3em;
+}
+
+.about-us h3 {
+    margin: 10px 0 20px 0;
+}
+.about-us .section-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 0 5em 0 ;
+    
+}
+.about-us .section-info .card {
+    margin: 25px;
+    background-color: var(--lightblue);
+}
+
+.about-us .section-info .card i,
+.about-us .section-info .card h4 {
+    color: var(--blue);
+}
+.about-us .section-info .card p, 
+.about-us .section-info .card i, 
+.about-us .section-info .card button {
+    margin: 20px;
+}
+
+.about-us .section-info .card i {
+    font-size: 5em;
+}
+
+.about-us .section-info .card button {
+    width: 40%;
+}
+
+
+/* roz videos */ 
+.roz, .way {
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.roz {
+    margin: 50px 0;
+}
+.roz video {
+    width: 50vw; 
+    margin: 2.2em;
+    border-radius: 5px;
+}
+
+.roz .section-content {
+    display: flex;
+    flex-direction: column;
+    margin: 200px 0 0 0;
+}
+
+.roz .section-content h3 {
+    margin: 0;
+    text-align: left;
+}
+
+.roz .section-content #letter {
+    margin: 25px 0;
+}
+
+/* get involved */
+.get-involved {
+    margin: 0 auto;
+}
+
+.get-involved h3 {
+    margin: 0;
+    color: var(--red);
+}
+
+.way {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3em auto;
+}
+
+.way .num-marker {
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background: var(--red);
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.way .header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.way .subtitle {
+    text-align: center;
+}
+
+.way .section-content p {
+    width: 50vw;
+}
+
+ 
+
+/* programs */ 
+.programs { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em 1em 5em 1em;
+} 
+.programs > * {
+    margin: 10px;
+}
+
+.programs h3 {
+    color: var(--green);
+}
+.programs .section-info {
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+.programs .card {
+    color: black;
+    height: 50vh;
+    text-align: center;
+    /* border: 3px solid var(--green); */
+    margin: 25px;
+}
+
+.programs .card img {
+    width: 25vw;
+    margin-bottom: 25px;
+}
+
+.programs .card h4 {
+    font-family: 'Fredoka';
+    color: var(--green);
+    font-size: 1.3em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.programs .section-info #madlab img {
+    height: 200px;
+}
+
+
+
+/* ABOUT PAGE */
+.mission {
+    margin: 25px auto;
+}
+
+.mission .section-info {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mission .section-info > * {
+    margin: 25px;
+}
+
+.mission img {
+    width: 50%;
+}
+
+.meet-roz {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.meet-roz .section-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 59vw;
+}
+
+.meet-roz .section-info > *{
+    margin: 25px;
+}
+
+.meet-roz img {
+    width: 20em;
+}
+
+.meet-roz .section-info a:hover {
+    color: var(--red);
+}
+
+.objectives {
+    width: 60vw;
+    margin: 50px auto;
+}
+
+.objectives h3 {
+    margin: 10px;
+}
+
+.testimonials h3 {
+    margin: 50px;
+}
+
+.testimonials .section-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.testimonials .section-info .card{
+    width: 45%;
+    height: 800px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.testimonials .section-info .header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin: 0 50px; */
+}
+
+.testimonials .section-info .header .header-info{
+    margin: 10px;
+}
+
+.testimonials .section-info .header img {
+    width: 15em;
+}
+
+#tiffany .header img {
+    width: 12em;
+}
+
+.testimonials .section-info .card p,
+.testimonials .section-info .header .header-info p{
+    text-align: left;
+}
+
+.testimonials .section-info .header .header-info #name{
+    font-weight: bolder
+}
+
+.testimonials .section-info .header .header-info #role{
+    font-style: italic;
+}
+
+
+/* PARTNER PAGE */ 
+.partner-section,
+.partner-section .section-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* display: grid; 
+    grid-template-columns: repeat(2, 1fr); */
+}
+
+
+.partner-section h3 {
+    margin: 25px;
+}
+
+.partner-section .section-info {
+    justify-content: space-evenly;
+}
+
+.partner-section .section-info,
+.partner-section #partnerForm {
+    width: 70vw;
+    margin: 25px;
+}
+
+#partnerForm p{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#partnerForm .subtitle {
+    font-style: italic;
+    font-size: 1em;
+}
+
+/* PROGRAMS PAGE */ 
+.about-programs {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.programs .card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.about-programs {
+    height: 50vh;
+}
+
+.about-programs p {
+    width: 80vw;
+    margin: 10px auto;
+}
+
+.programs .card {
+    height: 500px;
+}
+
+.programs .card .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.programs .card .card-info > * {
+    margin: 10px auto;
+}
+
+.programs .card .card-info .title{
+    font-family: 'Fredoka';
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--lightblue);
+    letter-spacing: 1px;
+}
+
+.programs .card .card-info button{
+    width: 50%;
+}
+
+
+/* PROGRAMS */ 
+#program-page-cards {
+    flex-direction: row;
 }
