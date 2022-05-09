@@ -14,7 +14,7 @@ include ('functions.php');
         <title>STEM Programs for Kids | Young STEM Professionals</title>
 
         <link rel="stylesheet" href="css/style.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://kit.fontawesome.com/8394b8f877.js" crossorigin="anonymous"></script>
     </head>
 
@@ -26,36 +26,75 @@ include ('functions.php');
             <div class="atf">
                 <div class="atf-container">
                     <h1 id="col-spc">Young Stem Professionals</h1>
-                    <h2>A non-profit organization providing leadership and STEM programs for kids 5-17</h2>
-                    <a href="register.php" class="cta-btn" title="Register">Register a Student</a>
+                    <h2>A non-profit organization providing leadership and STEM programs for kids 5-17. Register today to STEM-ulate the minds of tomorrow.</h2></br>
+                </div>
+                <div class="atf-container">
+                    <a href="register.php" class="primary-btn-hero" title="Register">Register a Student</a>
                 </div>
             </div>
             <div class="container">
 
-                <div class="row" id="ctr">
-                    <h2>About Young Stem Professionals</h2>
-                    <p>Young Stem Professionals is a 501©3 non-profit organization that encourages youth grades K - 12 to examine and explore the world of science, technology, engineering, and math, while developing leadership skills. Our programs encourage
-                        young people to strengthen their skills in problem-solving, performing hands-on, project-based activities, and explore the world of STEM-related opportunities, all in a fun and supportive environment.
-                    </p>
-                    <a href="about.php" class="cta-btn" id="btn-ctr" title="About">About</a>
+                    <div class="row" id="ctr">
+                        <section class = "about-us">
+                            <h2>Why Young STEM Professionals?</h2>
+                            <div class="section-info">
+                                <div class="card" id="who-card">
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <h4>Who We Are</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                        
+                                    <button class="secondary-btn"><a href="about.html">Learn More</a></button>
+                                </div>
+                
+                                <div class="card" id="what-card">
+                                    <i class="fa-solid fa-gears"></i>
+                                    <h4>What We Do</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                        
+                                    <button class="secondary-btn"><a href="programs.html">Explore Programs</a></button>
+                                </div>
+                        
+                                <div class="card" id="why-card">
+                                    <i class="fa-solid fa-atom"></i>
+                                    <h4>Why We Do It</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                        
+                                    <button class="secondary-btn"><a href="get-involved.php">Get Involved</a></button>
+                                </div>
+                            </div>
+                    </section>
                 </div>
+            </div>
 
-                <div class="partner-col">
-                    <h2>Current Partners</h2>
-                    <div class="row">
-                        <div class="col-4">
-                            <a href="https://bishopartstheatre.org/" target="_blank"><img src="img/Bishop-Arts-Theatre-Logo-Solid.jpg"></a>
-                            <a href="https://bishopartstheatre.org/" target="_blank"><b>Bishop Arts Theatre Center</b></a>
-                        </div>
-                        <div class="col-4">
-                            <img src="img\placeholder-image.png">
-                            <p><b>Partner Name #2</b></p>
-                        </div>
-                        <div class="col-4">
-                            <img src="img\placeholder-image.png">
-                            <p><b>Partner Name #3</b></p>
-                        </div>
-                    </div>
+            <div class="container">
+                 <div class="row" id="ctr">
+                        <!-- programs -->
+                        <section class="programs">
+                            <h3>Our Programs</h3>
+                            <div class="section-info">
+                                <div class="card" id="madlab">
+                                    <img src="img/Coding-3.jpg" alt="">
+                                    <h4>Mad Lab</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                </div>
+                        
+                                <div class="card" id="robotics">
+                                    
+                                    <img src="img/Jr-Robotics-2.jpg" alt="">
+                                    <h4>Robotics</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                </div>
+                        
+                                <div class="card" id="genius">
+                                    <img src="img/Racing-Competition.jpg" alt="">
+                                    <h4>Genius</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                </div>
+                            </div>
+                            <button class="primary-btn"><a href="programs.html">Register Your Student</a></button>
+                            
+                        </section>
+    
                 </div>
             </div>
 
