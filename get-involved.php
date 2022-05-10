@@ -34,6 +34,8 @@
                     <a class="cta-btn" target="_blank" href="https://www.paypal.com/donate?token=2TEUuots6rCX1X_BlohCokpWBDKSb9IPvVEkmvnCr226BBdhTJAvw2s7nGVbwgHxhRrhzhKfsZAA739s">Donate via Paypal</a>
                 </div>
                 <div class="row">
+
+                <div class ="column-12">
                     <h2>Volunteer Application Form</h2>
                     <p>Thank you for your interest in volunteering with Young STEM Professionals. Please complete the application fully, and we will be in contact with you soon.</p>
 
@@ -133,11 +135,13 @@
                                         </td>
                                     </tr>
                                 </table>
+                                <input class="primary-btn" type="submit"><br>
                             </div>
-                            <input class="sub-btn" type="submit">
+
                         </div>
                     </form>
                 </div>
+            </div>
             </div>
 
         </main>
