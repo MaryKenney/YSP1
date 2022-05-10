@@ -41,23 +41,23 @@ include ('functions.php');
                                 <div class="card" id="who-card">
                                     <i class="fa-solid fa-people-group"></i>
                                     <h4>Who We Are</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                    <p>Young Stem Professionals is a 501©3 non-profit organization that encourages youth grades K - 12 to examine and explore the world of science, technology, engineering, and math, while developing leadership skills.</p>
                         
-                                    <button class="secondary-btn"><a href="about.html">Learn More</a></button>
+                                    <button class="secondary-btn"><a href="about.php">Learn More</a></button>
                                 </div>
                 
                                 <div class="card" id="what-card">
                                     <i class="fa-solid fa-gears"></i>
                                     <h4>What We Do</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                    <p>Our programs encourage young people to strengthen their skills in problem-solving, performing hands-on, project-based activities, and explore the world of STEM-related opportunities, all in a fun and supportive environment. </p>
                         
-                                    <button class="secondary-btn"><a href="programs.html">Explore Programs</a></button>
+                                    <button class="secondary-btn"><a href="register.php">Explore Programs</a></button>
                                 </div>
                         
                                 <div class="card" id="why-card">
                                     <i class="fa-solid fa-atom"></i>
                                     <h4>Why We Do It</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                    <p>We believe that learning STEM early on promotes not only academic success, but also professional and personal growth. By bringing these services to primary education, YSP is preparing the minds of today for tomorrow. </p>
                         
                                     <button class="secondary-btn"><a href="get-involved.php">Get Involved</a></button>
                                 </div>
@@ -98,7 +98,7 @@ include ('functions.php');
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
                                 </div>
                             </div>
-                            <button class="primary-btn"><a href="programs.html">Register Your Student</a></button>
+                            <button class="primary-btn"><a href="register.php">Register Your Student</a></button>
                             
                         </section>
     
