@@ -67,6 +67,13 @@ include ('functions.php');
             </div>
 
             <div class="container">
+                <div class="row" id="ctr">
+                    <h3>A Word From Our Founder</h3>
+                    <video src="content/videos/team.MP4" controls autoplay></video>
+                </div>
+            </div>
+
+            <div class="container">
                  <div class="row" id="ctr">
                         <!-- programs -->
                         <section class="programs">
