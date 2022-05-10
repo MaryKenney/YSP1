@@ -149,7 +149,6 @@ if(isset($_POST["student-submissionBtn"])) {
             <p>A member of our team will be in contact regarding next steps!</p>
 
             <?php echo $output; ?>
-            <?php echo $update; ?>
 
         </div>
     </main>
