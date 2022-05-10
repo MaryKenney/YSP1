@@ -1616,6 +1616,7 @@ input[type=submit] {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 25px;
 }
 
 .testimonials .section-info .header{
@@ -1635,6 +1636,7 @@ input[type=submit] {
 
 #tiffany .header img {
     width: 12em;
+    margin-left: 40px;
 }
 
 .testimonials .section-info .card p,
@@ -1712,7 +1714,7 @@ input[type=submit] {
 }
 
 .programs .card {
-    height: 500px;
+    height: 585px;
 }
 
 .programs .card .card-info {
