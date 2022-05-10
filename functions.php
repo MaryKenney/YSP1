@@ -21,8 +21,9 @@
 $footer = "<footer>\n
 <div class='container'>\n
     <div class='row' id='footer-space'>\n
-        <a href='index.php'><img class='col-2' id='ft-logo' src='img/logo.webp' alt='Young STEM Professionals Logo'></a>\n
-        <div class='col-2'>\n
+        <a href='index.php'><img class='column-lg-3 column-xs-12' id='ft-logo' src='img/logo.webp' alt='Young STEM Professionals Logo'></a>\n
+        <div class='column-lg-1 column-xs-12'></div>\n
+        <div class='column-lg-2 column-xs-12'>\n
             <div class='ft-menu'>\n
                 <p><b>Important Links</b></p>\n
                 <ul class='onespc'>\n
@@ -34,11 +35,11 @@ $footer = "<footer>\n
                 </ul>\n
             </div>\n
         </div>\n
-        <div class='col-2'>\n
+        <div class='column-lg-3 column-xs-12'>\n
             <p><b>Description</b></p>\n
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum consequat auctor.</p>\n
+            <p>YSP is a non-profit organization providing leadership and STEM programs for kids 5-17.</p>\n
         </div>\n
-        <div class='col-2'>\n
+        <div class='column-lg-3 column-xs-12'>\n
             <p><b>Contact Us</b></p>\n
             <p>add social links later</p>\n
         </div>\n
