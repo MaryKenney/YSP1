@@ -29,9 +29,9 @@
                     <h1>Help Our Cause</h1>
                     <h2>Donate</h2>
                     <p>Your generous tax deductible donation, contributions and support to Young STEM Professionals will enable us to meet our mission and objectives to help Youth and Children to explore STEM opportunities for a better future - for themselves
-                        and mankind. Help us STEM-ulate the minds of the future.</p>
+                        and mankind. Help us STEM-ulate the minds of the future.</p><br>
 
-                    <a class="cta-btn" target="_blank" href="https://www.paypal.com/donate?token=2TEUuots6rCX1X_BlohCokpWBDKSb9IPvVEkmvnCr226BBdhTJAvw2s7nGVbwgHxhRrhzhKfsZAA739s">Donate via Paypal</a>
+                    <a class="primary-btn" target="_blank" href="https://www.paypal.com/donate?token=2TEUuots6rCX1X_BlohCokpWBDKSb9IPvVEkmvnCr226BBdhTJAvw2s7nGVbwgHxhRrhzhKfsZAA739s">Donate via Paypal</a><br>
                 </div>
                 <div class="row">
 
@@ -134,7 +134,7 @@
                                             <label for="saturday">Saturday</label>
                                         </td>
                                     </tr>
-                                </table>
+                                </table><br>
                                 <input class="primary-btn" type="submit"><br>
                             </div>
 
