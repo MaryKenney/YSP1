@@ -68,10 +68,10 @@ include ('functions.php');
 
             <div class="container">
                 <div class="row" id="ctr">
-                    <h3>A Word From Our Founder</h3>
-                    <video src="content/videos/team.MP4" controls autoplay></video>
+                    <h2>A Word From Our Founder</h2>
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/CfCnC-994lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-            </div>
+            </div><br>
 
             <div class="container">
                  <div class="row" id="ctr">
@@ -81,21 +81,21 @@ include ('functions.php');
                             <div class="section-info">
                                 <div class="card" id="madlab">
                                     <img src="img/Coding-3.jpg" alt="">
-                                    <h4>Mad Lab</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                    <h4>MadLab</h4>
+                                    <p>MadLabs are inquiry-driven, thematic activities. MadLabs are not only fun and engaging, but also help students make connections between the classroom and current events.</p>
                                 </div>
                         
                                 <div class="card" id="robotics">
                                     
                                     <img src="img/Jr-Robotics-2.jpg" alt="">
                                     <h4>Robotics</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                    <p>From engineering, to programming, and art, Robotics programs combine creativity with problem-solving skills. Our Robotics program is taught by the finest STEM professionals in Texas and emphasizes innovation, teamwork, and inclusivity. </p>
                                 </div>
                         
                                 <div class="card" id="genius">
                                     <img src="img/Racing-Competition.jpg" alt="">
                                     <h4>Genius</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet et leo a condimentum. Nulla orci nibh, fringilla a fermentum eu, fermentum at elit.</p>
+                                    <p>The Genius Program makes learning STEM fun through hands-on and interactive activities. Throughout Genius activies, students will learn problem-solving, creativity, and teamwork.</p>
                                 </div>
                             </div>
                             <button class="primary-btn"><a href="register.php">Register Your Student</a></button>
