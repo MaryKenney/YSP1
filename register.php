@@ -63,7 +63,7 @@ include('functions.php');
 
                     <div class="form-section">
                         <h3>Please select a program*:</h3>
-                        <select name="program" id="programs">
+                        <select name="program" class="programs" id="programs">
                             <option value=""></option>
                             <option value="Program 1 | Start Date - End Date">Program 1 | Start Date - End Date</option>
                             <option value="Program 2 | Start Date - End Date">Program 2 | Start Date - End Date</option>
