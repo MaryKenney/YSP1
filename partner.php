@@ -27,11 +27,11 @@ include ('functions.php');
             <h2>Become an Education Partner</h2>
             
             <div class="row">
-                <div class="col-6">
+                <div class="column-12">
                     <p>If you are interested in partnering with Young STEM Professionals to help spread a passion for leadership building skills and STEM education to children and youth, contact our staff today! Our representatives will respond to your message within 24 - 48 hours.</p>
                 </div>
 
-                <div class="col-6">
+                <div class="column-12">
                     <form action="partner_processing.php" method="post">
                         <div class="form-section">
                             <h3>Contact Information</h3>
@@ -46,9 +46,9 @@ include ('functions.php');
                                
                                 <span class="form-info">About Your Orgnization: </span><input class="textarea" type="textarea" name="orgAbout" placeholder="What does your organization do?"><br>
 
-                                <span class="form-info">Message*: </span><input class="textarea" type="textarea" name="orgMessage" placeholder="Why you're interested in partnering with YSP?"><br>
+                                <span class="form-info">Message*: </span><input class="textarea" type="textarea" name="orgMessage" placeholder="Why you're interested in partnering with YSP?"><br><br>
 
-                                <input class="sub-btn" id="partner-subBtn" type="submit" name="partner-submissionBtn">
+                                <input class="primary-btn" id="partner-subBtn" type="submit" name="partner-submissionBtn">
                             </div>
                         </div>
                     </form>
