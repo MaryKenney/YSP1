@@ -5,9 +5,9 @@ include ("functions.php");
 $conn = dbConnect(); 
 
 if(isset($_POST["student-submissionBtn"])) {
-    $required = array("childname", "childdob", "childaddress", "childinfo", "childallergies", "childmedication", "parentname1", "parentphone1", "parentemail1", "parentname2", "parentphone2", "parentemail2", "programs", "terms");
+    $required = array("program", "childFirstName", "childLastName", "childDOB", "school", "grade", "address1", "city", "state", "zipcode", "accommodations", "allergies", "gFirstName1", "gLastName1", "relation1", "email1", "terms");
 
-    $expected = array("childname", "childdob", "childaddress", "childinfo", "childallergies", "childmedication", "parentname1", "parentphone1", "parentemail1", "parentname2", "parentphone2", "parentemail2", "program", "terms");
+    $expected = array("program", "childFirstName", "childLastName", "childDOB", "school", "grade", "address1", "address2", "city", "state", "zipcode", "accommodations","accommodationBox","allergies", "allergiesBox", "gFirstName1", "gLastName1", "relation1", "email1", "phone1", "terms");
 
 
     $missing = array();
@@ -30,44 +30,40 @@ if(isset($_POST["student-submissionBtn"])) {
     $output = ""; 
     if(empty($missing)) {
         // outputing confirmation message
-        $childinfoStr = nl2br(htmlentities($childinfo));
-        $childallergiesStr = nl2br(htmlentities($childallergies));
-        $childmedicationStr = nl2br(htmlentities($childmedication));
+        $accommodationsStr = nl2br(htmlentities($accommodationBox));
+        $allergiesStr = nl2br(htmlentities($allergiesBox));
 
         $output = "
-        <p>We have re.</p>
-        
-        <b>Student Information</b>
-        <p>Name: $childname</p>
-        <p>Program: $program</p>
-        <p>Date of Birth: $childdob</p>
-        <p>Address: $childaddress</p>
-        <p>Accommodations: $childinfoStr</p>
-        <p>Allerigies: $childallergiesStr</p>
-        <p>Medications: $childmedicationStr</p> <br> <br>
+            <p>We have received your student registration. Be on the look out for more information coming soon.</p>
+            
 
-        <b>Guardian Information</b>
-        <p>Guadian 1:</p>
-        <ul>
-            <li>Name: $parentname1</li>
-            <li>Email: $parentemail1</li>
-            <li>Phone: $parentphone1</li>
-        </ul>
-        <p>Guadian 2:</p>
-        <ul>
-            <li>Name: $parentname2</li>
-            <li>Email: $parentemail2</li>
-            <li>Phone: $parentphone2</li>
-        </ul> ";
+            <p>Choosen Program: $program</p>
+
+            <b style='text-align:center;'>Student Information</b>
+            <p>Name: $childFirstName $childLastName</p>
+            <p>Date of Birth: $childDOB</p>
+            <p>School: $school</p>
+            <p>Grade Level: $grade</p>
+            <p>Address: $address1 $address2, $city, $state $zipcode</p>
+            <p>Accommodations: $accommodations - $accommodationsStr</p>
+            <p>Allergies: $allergies - $allergiesStr</p>
+            
+            <b style='text-align:center;'>Guardian Information</b>
+            <p>Name: $gFirstName1 $gLastName1</p>
+            <p>Relation to Student: $relation1</p>
+            <p>Email: $email1</p>
+            <p>Phone: $phone1</p>";
+
 
 
         // emailing confirmation message
         $subject = "Young STEM Professional Registration Confirmation";
+
         $from = "YSP@youngstemprofessionals.org";
 
         $msg = "<html>
         <body>
-            <b>Hello, $parentname1!<b>
+            <b>Hello, $gFirstName1!<b>
             <p>Thank you for registering your student with Young STEM Professionals in our <i>$program<i> program. A member of YSP will be in touch in regards to next steps soon.</p> <br> <br> 
 
             $output
@@ -87,11 +83,46 @@ if(isset($_POST["student-submissionBtn"])) {
             'X-Mailer: PHP/' . phpversion();
  
         
-        mail($parentemail1, $subject, $msg, $headers);
-    } else {
+        mail($email1, $subject, $msg, $headers);
 
+        // adding to db 
+        if($program == "Robotics") {
+            $pid = 1; 
+        } else if($program == "MadLab") {
+            $pid = 2; 
+        } else if ($program == "Genius") {
+            $pid = 3; 
+        }else { 
+            $pid = 4;
+        }
+
+
+        // adding to db 
+        $stmt = $conn->stmt_init();
+
+        $sql = "INSERT INTO students (PID, program, childFirstName, childLastName, childDOB, school, grade, address1, address2, city, state, zipcode, accommodations, accommodationBox, allergies, allergiesBox, gFirstName1, gLastName1, relation1, email1, phone1, terms) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+        $stmt->prepare($sql);
+
+        if($stmt->bind_param('isssssssssssssssssssss', $pid, $program, $childFirstName, $childLastName, $childDOB, $school, $grade, $address1, $address2, $city, $state, $zipcode, $accommodations, $accommodationBox, $allergies, $allergiesBox, $gFirstName1, $gLastName1, $relation1, $email1, $phone1, $terms)) {
+            if($stmt->execute()) {
+                $update = "<span>execute?</span>";
+            } else {
+                $update = "<span>didn't execute</span>";
+            }
+        } else {
+            $update = "<span>didn't bind</span>";
+        }
+
+        
+
+        $stmt->close();
+    } else { 
+        $missingFieldList = implode(", ",$missing);
+		$output = "The following fields are missing from your post, please go back and fill them in.  Thank you. <br>
+						<b>Missing fields: $missingFieldList </b>
+					";
     }
-
 } 
 
 ?>
@@ -107,7 +138,7 @@ if(isset($_POST["student-submissionBtn"])) {
     <title>Registration | Young STEM Professionals</title>
 
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/8394b8f877.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -118,6 +149,7 @@ if(isset($_POST["student-submissionBtn"])) {
             <p>A member of our team will be in contact regarding next steps!</p>
 
             <?php echo $output; ?>
+            <?php echo $update; ?>
 
         </div>
     </main>

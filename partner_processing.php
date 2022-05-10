@@ -5,8 +5,8 @@ include ("functions.php");
 $conn = dbConnect(); 
 
 if(isset($_POST["partner-submissionBtn"])) {
-    $required = array("fname", "lname", "phone", "email","orgName", "orgLocation", "orgAbout", "orgMessage");
-    $expected = array("fname", "lname", "phone", "email","orgName", "orgLocation", "orgAbout", "orgMessage");
+    $required = array("fname", "lname", "phone", "email","orgName", "orgWebsite", "orgLocation", "orgAbout", "orgMessage");
+    $expected = array("fname", "lname", "phone", "email","orgName", "orgWebsite", "orgLocation", "orgAbout", "orgMessage");
 
     $missing = array();
 
@@ -37,6 +37,7 @@ if(isset($_POST["partner-submissionBtn"])) {
         <p>Phone: $phone</p>
         <p>Email: $email</p>
         <p>Organization: $orgName in $orgLocation</p>
+        <p>Website: $orgWebsite</p>
         <p>About the Orgnization: $orgaboutStr</p>
         <p>Message: $orgmessageStr</p> ";
 
@@ -47,7 +48,7 @@ if(isset($_POST["partner-submissionBtn"])) {
         $msg = "<html>
         <body>
             <b>Hello, $fname $lname!<b>
-            <p>Thank you for your interest in partnering with Young STEM Professionals. A member of YSP will be in touch in regards to next steps soon.</p> <br> <br> 
+            <p class='subtitle'>Thank you for your interest in partnering with Young STEM Professionals. A member of YSP will be in touch in regards to next steps soon.</p> <br> <br> 
 
             $output
 
@@ -65,19 +66,17 @@ if(isset($_POST["partner-submissionBtn"])) {
             'Reply-To: '.$from."\r\n" .
             'X-Mailer: PHP/' . phpversion();
  
-        
         mail($email, $subject, $msg, $headers);
-
 
 
         // adding to db 
         $stmt = $conn->stmt_init();
 
-        $sql = "INSERT INTO partners (firstName, lastName, phoneNumber, email, orgName, city, aboutOrg, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO partners (firstName, lastName, phoneNumber, email, orgName, orgWebsite, city, aboutOrg, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 
         $stmt->prepare($sql);
-        $stmt->bind_param('ssssssss', $fname, $lname, $phone, $email, $orgName, $orgLocation, $orgaboutStr, $orgmessageStr);
+        $stmt->bind_param('sssssssss', $fname, $lname, $phone, $email, $orgName, $orgWebsite, $orgLocation, $orgaboutStr, $orgmessageStr);
 
         if($stmt->execute()) {
             $update = "<span>Query Executed</span>";
@@ -91,11 +90,8 @@ if(isset($_POST["partner-submissionBtn"])) {
 		$output = "The following fields are missing from your post, please go back and fill them in.  Thank you. <br>
 						<b>Missing fields: $missingFieldList </b>
 					";
-
     }
-
 } 
-
 ?>
 
 <!DOCTYPE html>
@@ -109,7 +105,7 @@ if(isset($_POST["partner-submissionBtn"])) {
     <title>Registration | Young STEM Professionals</title>
 
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/8394b8f877.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -134,7 +130,6 @@ if(isset($_POST["partner-submissionBtn"])) {
                         <p style="text-align: center;">*required fields</p>
                         <div class="form-body">
                             <?php echo $output ?>
-                            <?php echo $update ?>
                         </div>
                     </div>
                         </form>

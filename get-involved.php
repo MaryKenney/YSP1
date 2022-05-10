@@ -14,7 +14,7 @@
     <title>Get Involved | Young STEM Professionals</title>
 
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/8394b8f877.js" crossorigin="anonymous"></script>
 
 </head>
@@ -39,7 +39,7 @@
                     <h2>Volunteer Application Form</h2>
                     <p>Thank you for your interest in volunteering with Young STEM Professionals. Please complete the application fully, and we will be in contact with you soon.</p>
 
-                    <form action="vol-form.php" method="post">
+                    <form action="volunteer_processing.php" method="post">
 
                         <div class="form-section">
                             <h3>Contact Information</h3>
@@ -83,6 +83,9 @@
                                             <input type="radio" name="volExp" id="expNo" value="expNo">
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td><textarea name="expBox" id="" cols="30" rows="10"></textarea></td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>
@@ -96,9 +99,9 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="checkbox" name="programs" id="robotics" value="robotics">Robotics 
-                                            <input type="checkbox" name="programs" id="madlab" value="madlab">MadLab 
-                                            <input type="checkbox" name="programs" id="geniusbar" value="geniusbar">Genius Bar <br>
+                                            <input type="checkbox" name="programs[]" id="robotics" value="robotics">Robotics 
+                                            <input type="checkbox" name="programs[]" id="madlab" value="madlab">MadLab 
+                                            <input type="checkbox" name="programs[]" id="geniusbar" value="geniusbar">Genius Bar <br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -106,36 +109,36 @@
                                     </tr>
                                     <tr>
                                         <td class="inline-fl">
-                                            <input type="checkbox" name="volDays" id="sunday" value="sunday">
+                                            <input type="checkbox" name="volDays[]" id="sunday" value="sunday">
                                             <label for="sunday">Sunday</label>
                                         </td>
                                         <td class="inline-fl">
-                                            <input type="checkbox" name="volDays" id="monday" value="monday">
+                                            <input type="checkbox" name="volDays[]" id="monday" value="monday">
                                             <label for="monday">Monday</label>
                                         </td>
                                         <td class="inline-fl">
-                                            <input type="checkbox" name="volDays" id="tuesday" value="tuesday">
+                                            <input type="checkbox" name="volDays[]" id="tuesday" value="tuesday">
                                             <label for="tuesday">Tuesday</label>
                                         </td>
                                         <td class="inline-fl">
-                                            <input type="checkbox" name="volDays" id="wednesday" value="wednesday">
+                                            <input type="checkbox" name="volDays[]" id="wednesday" value="wednesday">
                                             <label for="wednesday">Wednesday</label>
                                         </td>
                                         <td class="inline-fl">
-                                            <input type="checkbox" name="volDays" id="thursday" value="thursday">
+                                            <input type="checkbox" name="volDays[]" id="thursday" value="thursday">
                                             <label for="thursday">Thursday</label>
                                         </td>
                                         <td class="inline-fl">
-                                            <input type="checkbox" name="volDays" id="friday" value="friday">
+                                            <input type="checkbox" name="volDays[]" id="friday" value="friday">
                                             <label for="friday">Friday</label>
                                         </td>
                                         <td class="inline-fl">
-                                            <input type="checkbox" name="volDays" id="saturday" value="saturday">
+                                            <input type="checkbox" name="volDays[]" id="saturday" value="saturday">
                                             <label for="saturday">Saturday</label>
                                         </td>
                                     </tr>
                                 </table><br>
-                                <input class="primary-btn" type="submit"><br>
+                                <input class="primary-btn" type="submit" name="volunteer-submissionBtn"><br>
                             </div>
 
                         </div>

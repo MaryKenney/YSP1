@@ -1,0 +1,194 @@
+/* fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Open+Sans&display=swap');
+
+/* colors */ 
+:root {
+    --red: #D80609;
+    --yellow: #F4CF0E;
+    --green: #8BCF49;
+    --blue: #245396;
+    --lightblue: #91BCFF;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+form > * {
+    margin: 20px auto;
+}
+label {
+    margin: 10px;
+}
+input {
+    height: 25px;
+}
+input[type="text"]
+input[type="email"] {
+    width: 40vw;
+    padding: 5px;
+}
+
+input[type="radio"] {
+    width: 50px;
+    margin-left: 12px;
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    width: 40vw;
+    height: fit-content;
+    margin: auto;
+}
+
+#showsub-btn {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+}
+
+
+/* student registration form */
+.registration-header {
+    background: url("content/imgs/Jr-Robotics.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2em auto;
+    height: 30vh;
+}
+.registration-header h3 {
+    margin: 0;
+    padding: 0;
+}
+.registration-form {
+    width: 70vw;
+    margin: auto; 
+}
+
+.registration-form form,
+#partnerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.registration-form form > * {
+    margin-bottom: 5em;
+}
+
+.registration-form form div > * {
+    margin-bottom: 2em;
+}
+
+#program, #relation {
+    width: 30vw;
+}
+
+.registration-form input[name="school"] {
+    width: 44vw;
+}
+
+.registration-form input[name="address1"], 
+.registration-form input[name="address2"] {
+    width: 70vw;
+}
+
+.register-btn {
+    border: none; 
+    padding: 10px; 
+    text-align: center; 
+    color: white;
+    background: var(--blue);
+    width: 200px;
+    font-weight: 500;
+    font-size: .8em;
+}
+
+#rm-guardian {
+    background: var(--red);
+}
+
+.register-btn:hover {
+    background: transparent;
+}
+
+#add-guardian:hover {
+    background: transparent;
+    border: 3px solid var(--blue);
+    color: var(--blue);
+}
+#rm-guardian:hover {
+    background: transparent;
+    border: 3px solid var(--red);
+    color: var(--red)
+}
+
+.registration-form input[name="student-submissionBtn"] {
+    height: auto;
+}
+
+.cb-terms {
+    display: flex;
+    align-items: center;
+}
+.termsLabel {
+    font-size: 1em;
+}
+
+
+/* PARTNER FORM */ 
+.subtitle {
+    text-align: center;
+}
+
+#partnerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#partnerForm form {
+    width: 50vw;
+    display: grid; 
+    grid-template-columns: repeat(3, 200px);
+}
+
+#partnerForm form input[type="text"],
+#volunteer form input[type="text"] {
+    width: 25vw;
+}
+
+.messageBox {
+    display: flex;
+    align-items: flex-start;
+}
+
+#volunteer form {
+    display: grid; 
+    grid-template-columns: 125px 1fr;
+    align-items: center;
+}
+
+#volunteer form label[for="availability"], .availabilityCheckboxes {
+    align-self: flex-start;
+}
+
+.availabilityCheckboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-options { 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.time-options > * {
+    margin: 10px;
+}
